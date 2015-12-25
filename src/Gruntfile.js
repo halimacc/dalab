@@ -64,7 +64,6 @@ module.exports = function(grunt) {
 
 
 
-
 	// Load task functions
 	var taskConfigurations = loadTasks('./tasks/config'),
 		registerDefinitions = loadTasks('./tasks/register');

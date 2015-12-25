@@ -1,0 +1,28 @@
+{
+  "name": "assets",
+  "homepage": "https://github.com/halimacc/dalab",
+  "authors": [
+    "Chong <harimabf@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap": "~0.14.3",
+    "angular-moment": "~0.10.3",
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-mocks": "~1.4.8",
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.6"
+  }
+}
