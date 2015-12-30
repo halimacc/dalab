@@ -1,32 +1,10 @@
 <!DOCTYPE html>
-<html ng-app="todoApp">
+<html ng-app="dalab">
   <head>
-    <title>DALab</title>
+    <title>DALAB</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-    
-    <!--  
-        Stylesheets and Preprocessors
-        ==============================
-
-        You can always bring in CSS files manually with `<link>` tags, or asynchronously
-        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage 
-        of Sails' conventional asset pipeline (boilerplate Gruntfile).
-
-        By default, stylesheets from your `assets/styles` folder are included
-        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
-        are supported. In production, your styles will be minified and concatenated into
-        a single file.
-        
-        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-            
-            + Change the order of your CSS files
-            + Import stylesheets from other directories
-            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
-    -->
 
     <!--STYLES-->
     <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
@@ -35,6 +13,35 @@
   </head>
 
   <body>
+  <!-- NAVBAR
+================================================== -->
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="http://getbootstrap.com/examples/carousel/#">DALAB</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="http://getbootstrap.com/examples/carousel/#about">论文</a></li>
+                <li><a href="http://getbootstrap.com/examples/carousel/#about">项目</a></li>
+                <li><a href="http://getbootstrap.com/examples/carousel/#contact">成员</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
     <div ng-view></div>
     <!--
         Client-side Templates

@@ -1,4 +1,4 @@
-todoApp.service('TodoService', function($http, $q) {
+dalab.service('TodoService', function($http, $q) {
   return {
     'getTodos': function() {
       var defer = $q.defer();

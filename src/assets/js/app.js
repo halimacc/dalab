@@ -1,7 +1,7 @@
 'use strict';
 
-var todoApp = angular.module('todoApp', ['ngRoute', 'ui.bootstrap']);
-todoApp.config(['$routeProvider',
+var dalab = angular.module('dalab', ['ngRoute', 'ui.bootstrap']);
+dalab.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.when('/', {
       templateUrl: '/templates/todo.html',
@@ -13,7 +13,7 @@ todoApp.config(['$routeProvider',
   }
 ]);
 
-todoApp.controller('TodoCtrl', ['$scope', '$rootScope', 'TodoService', function($scope, $rootScope, TodoService) {
+dalab.controller('TodoCtrl', ['$scope', '$rootScope', 'TodoService', function($scope, $rootScope, TodoService) {
   $scope.formData = {};
   $scope.todos = [];
 
