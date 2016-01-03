@@ -1,68 +1,70 @@
 <!DOCTYPE html>
-<html ng-app="dalab">
+<html ng-app="dalabApp">
   <head>
     <title>DALAB</title>
 
     <!-- Viewport mobile tag for sensible mobile support -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <!--STYLES-->
-    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/bower_components/Materialize/dist/css/materialize.min.css">
     <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/main.css">
     <!--STYLES END-->
   </head>
 
   <body>
-  <!-- NAVBAR
-================================================== -->
-    <div class="navbar-wrapper">
-      <div class="container">
+<!-- NAVBAR ================================================== -->
+    <div class="navbar-fixed">
+      <nav class="red lighten-2" role="navigation">
+        <div class="nav-wrapper container">
+          <a id="logo-container" href="http://localhost:1337/" class="brand-logo">DALAB</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">论文</a></li>
+            <li><a href="#">项目</a></li>
+            <li><a href="/people">成员</a></li>
+          </ul>
 
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="http://getbootstrap.com/examples/carousel/#">DALAB</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="http://getbootstrap.com/examples/carousel/#about">论文</a></li>
-                <li><a href="http://getbootstrap.com/examples/carousel/#about">项目</a></li>
-                <li><a href="http://getbootstrap.com/examples/carousel/#contact">成员</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-      </div>
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
     </div>
 
+
+<!-- BODY =================================================== -->
     <div ng-view></div>
-    <!--
-        Client-side Templates
-        ========================
 
-        HTML templates are important prerequisites of modern, rich client applications.
-        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
-        that you load these templates client-side.
-
-        By default, your Gruntfile is configured to automatically load and precompile
-        client-side JST templates in your `assets/templates` folder, then
-        include them here automatically (between TEMPLATES and TEMPLATES END).
-        
-        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
-        For example, here are a few things you could do:
-
-            + Import templates from other directories
-            + Use a different template engine (handlebars, jade, dust, etc.)
-            + Internationalize your client-side templates using a server-side
-              stringfile before they're served.
-    -->
+<!-- FOOTER ================================================== -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Footer Content</h5>
+            <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Links</h5>
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+              <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+        © 2016 Copyright Text
+        <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+        </div>
+      </div>
+    </footer>
 
     <!--TEMPLATES-->
     <script type="text/javascript" src="/jst.js"></script>
@@ -97,7 +99,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/angular/angular.js"></script>
     <script src="/bower_components/angular-route/angular-route.js"></script>
-    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script src="/bower_components/Materialize/dist/js/materialize.min.js"></script>
     <script src="/js/app.js"></script>
     <script src="/js/service/TodoService.js"></script>
     <!--SCRIPTS END-->

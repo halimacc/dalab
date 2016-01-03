@@ -17,12 +17,12 @@
     "tests"
   ],
   "dependencies": {
-    "angular-bootstrap": "~0.14.3",
     "angular-moment": "~0.10.3",
     "angular": "~1.4.8",
     "angular-route": "~1.4.8",
     "angular-mocks": "~1.4.8",
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.6"
+    "Materialize": "materialize#~0.97.5",
+    "angular-materialize": "~0.1.2"
   }
 }

@@ -1,10 +1,13 @@
 'use strict';
 
-var dalab = angular.module('dalab', ['ngRoute', 'ui.bootstrap']);
-dalab.config(['$routeProvider',
+var dalabApp = angular.module('dalabApp', ['ngRoute', 'ui.materialize']);
+dalabApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.when('/', {
       templateUrl: '/templates/todo.html',
+      controller: 'TodoCtrl'
+    }).when('/people', {
+      templateUrl: '/templates/people.html',]
       controller: 'TodoCtrl'
     }).otherwise({
       redirectTo: '/',
@@ -13,7 +16,7 @@ dalab.config(['$routeProvider',
   }
 ]);
 
-dalab.controller('TodoCtrl', ['$scope', '$rootScope', 'TodoService', function($scope, $rootScope, TodoService) {
+dalabApp.controller('TodoCtrl', ['$scope', '$rootScope', 'TodoService', function($scope, $rootScope, TodoService) {
   $scope.formData = {};
   $scope.todos = [];
 
