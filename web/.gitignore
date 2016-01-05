@@ -1,7 +1,12 @@
-logs/*
-!.gitkeep
+# Logs
+logs
+*.log
+npm-debug.log*
+
 node_modules/
+bower_components/
+
+!.gitkeep
 tmp
 .idea
 .DS_Store
-bower_components/

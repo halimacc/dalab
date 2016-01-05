@@ -1,6 +1,6 @@
 {
   "name": "dalab-web",
-  "description": "website(front) of dalab",
+  "description": "A website of dalab, sjtu",
   "authors": [
     "Chong"
   ],
@@ -14,5 +14,11 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-resource": "~1.4.8",
+    "jquery": "~2.1.4"
+  }
 }
