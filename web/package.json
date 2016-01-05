@@ -1,0 +1,19 @@
+{
+  "name": "dalab-web",
+  "version": "0.0.0",
+  "description": "A website of dalab, sjtu",
+  "scripts": {
+    "postinstall": "bower install",
+
+    "prestart": "npm install",
+    "start": "http-server ./app/ -a 0.0.0.0 -p 8000",
+
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chong",
+  "license": "ISC",
+  "dependencies": {
+    "bower": "^1.7.2",
+    "http-server": "^0.8.5"
+  }
+}
