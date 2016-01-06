@@ -3,9 +3,11 @@ logs
 *.log
 npm-debug.log*
 
+# dependencies
 node_modules/
 bower_components/
 
+#environment and ide
 !.gitkeep
 tmp
 .idea
