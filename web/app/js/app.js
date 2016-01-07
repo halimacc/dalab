@@ -2,6 +2,8 @@
 /* App Module */
 var dalabApp = angular.module('dalabApp', [
   'ngRoute',
+  'ngMaterial',
+  
   'peopleControllers'
 ]);
 
