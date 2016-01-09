@@ -2,32 +2,41 @@
 <html ng-app='dalabApp'>
 
 <head>
-  <title>dalab</title>
+  <title>数字艺术实验室</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css" />
-  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700'>
-  <link rel="stylesheet" href="./css/app.css" />
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700' />
+  <link rel="stylesheet" href="./asset/app.css" />
 
   <!--STYLES-->
 </head>
 
-<body layout='column'>
+<body layout="column">
   <!-- TOOLBAR -->
-  <md-toolbar layout="row" class="md-primary">
-    <h1>Angular Material - Starter App</h1>
+  <md-toolbar layout="row" layout-align="center start">
+    <div class="md-toolbar-tools layout-max-width">
+      <span class="title">
+        <a href="/#/">数字艺术实验室</a>
+      </span>
+      <span flex></span>
+      <md-button aria-label="Paper">
+        <a href="/#/paper">论文</a>
+      </md-button>
+      <md-button aria-label="Project">
+        <a href="/#/project">项目</a>
+      </md-button>
+      <md-button aria-label="People">
+        <a href="/#/people">成员</a>
+      </md-button>
+    </div>
   </md-toolbar>
 
   <!-- VIEW -->
-
-  <div flex layout="row">
-    <md-content flex id="content">
-      <div ng-view></div>
-    </md-content>
-  </div>
+  <md-content id="content" ng-view></md-content>
 
   <!-- SCRIPTS -->
   <script src="./bower_components/jquery/dist/jquery.js"></script>
@@ -38,6 +47,8 @@
   <script src="./bower_components/angular-aria/angular-aria.js"></script>
   <script src="./bower_components/angular-material/angular-material.js"></script>
   <script src="./src/app.js"></script>
+  <script src="./src/people/People.js"></script>
+  <script src="./src/people/PeopleController.js"></script>
 </body>
 
 </html>

@@ -10,10 +10,10 @@ var dalabApp = angular.module('dalabApp', [
 dalabApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.when('/people', {
-      templateUrl: 'templates/people-list.html',
-      controller: 'PeopleCtroller'
+      templateUrl: 'src/people/view/peopleList.html',
+      controller: 'PeopleController'
     }).otherwise({
-      redirectTo: 'people'
+      redirectTo: '/people'
     });
   }
 ]);
@@ -21,8 +21,8 @@ dalabApp.config(['$routeProvider',
 dalabApp.config(['$mdThemingProvider', '$mdIconProvider',
   function($mdThemingProvider, $mdIconProvider) {
     $mdThemingProvider.theme('default')
-      .primaryPalette('light-blue', {
-        'default': '400',
+      .primaryPalette('cyan', {
+        'default': '500',
         'hue-1': '100',
         'hue-2': '600',
         'hue-3': 'A100'
