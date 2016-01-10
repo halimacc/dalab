@@ -11,7 +11,8 @@ dalabApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.when('/people', {
       templateUrl: 'src/people/view/peopleList.html',
-      controller: 'PeopleController'
+      controller: 'PeopleController',
+      controllerAs: 'peopleCtrl'
     }).otherwise({
       redirectTo: '/people'
     });

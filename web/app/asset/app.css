@@ -1,3 +1,4 @@
+/*global font*/
 p,
 span,
 a,
@@ -10,6 +11,12 @@ h6 {
   font-family: Roboto, 'Microsoft YaHei', sans-serif;
 }
 
+/*global layout*/
+.layout-max-width {
+  max-width: 1200px;
+}
+
+/* styles for toolbar elements*/
 md-toolbar .title {
   color: white;
   font-size: 24px;
@@ -19,10 +26,12 @@ md-toolbar .md-button a {
   color: white;
 }
 
-.layout-max-width {
-  max-width: 1200px;
+/*styles for people page*/
+.people-card {
 }
+
 
 .card-media {
   background-color: #999999;
 }
+
