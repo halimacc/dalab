@@ -13,37 +13,45 @@ md-toolbar a {
 }
 
 
-/*global layout*/
+/*layout*/
 
 .layout-max-width {
   max-width: 1200px;
+}
+
+.layout-match-parent {
   width: 100%;
+  height: 100%;
+}
+
+.layout-match-parent-horizontal {
+  width: 100%
+}
+
+.layout-match-parent-vertical {
+  height: 100%;
 }
 
 
 /* styles for toolbar elements*/
 
-md-toolbar .title-en {
+md-toolbar .nav-title {
   color: white;
   font-size: 18 px;
   font-weight: bold;
 }
 
-md-toolbar .seperator {
-  color: white;
+md-toolbar .nav-title.text-ch {
+  margin-bottom: 3px;
+}
+
+md-toolbar .nav-title.seperator {
   opacity: 0.5;
   font-size: 30px;
   margin: 0px 5px 0px 5px;
 }
 
-md-toolbar .title-ch {
-  color: white;
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 3px;
-}
-
-md-toolbar .md-button a {
+md-toolbar .md-button .nav-button {
   color: white;
   font-weight: bold;
 }
@@ -51,12 +59,12 @@ md-toolbar .md-button a {
 
 /*styles for banner*/
 
-.md-banner {
+.banner {
   height: 192px;
   background: #00BCD4;
 }
 
-.md-banner .md-banner-title {
+.banner .banner-title {
   font-family: Roboto Mono, 'Microsoft YaHei', sans-serif;
   color: white;
   width: auto;

@@ -1,18 +1,18 @@
 <!-- PeopleController as peopleCtrl -->
-<div id="banner" class="md-banner" layout="column" layout-align="start center">
-  <div class="layout-max-width" layout="row" layout-align="start center" style="height:100%">
-    <span class="md-banner-title">People</span>
+<div class="banner" layout="column" layout-align="start center">
+  <div class="layout-max-width layout-match-parent" layout="row" layout-align="start center">
+    <span class="banner-title">People</span>
   </div>
 </div>
 
 <div layout="column" layout-align="start center" flex>
-  <div class="layout-max-width" layout="column" layout-align="start">
+  <div class="layout-max-width layout-match-parent-horizontal" layout="column" layout-align="start">
 
     <div ng-repeat="role in peopleCtrl.roles" layout="column" layout-align="start">
-      <p class="md-title" layout="row" layout-align="center">{{peopleCtrl.roleNames[role]}}</p>
+      <p class="md-title" layout="row" layout-align="center">{{role}}</p>
       <div layout="row" layout-wrap layout-align="start start">
 
-        <md-card ng-repeat="person in peopleCtrl.people[role]" class="people-card" flex-xs="100" flex-sm="45" flex="30">
+        <md-card ng-repeat="person in peopleCtrl.people | filter:role" class="people-card" flex-xs="100" flex-sm="45" flex="30">
           <md-card-title>
             <md-card-title-text>
               <span class="md-headline">{{person.name}}</span>
