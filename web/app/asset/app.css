@@ -1,37 +1,72 @@
 /*global font*/
+
 p,
 span,
-a,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+a {
   font-family: Roboto, 'Microsoft YaHei', sans-serif;
 }
 
-/*global layout*/
-.layout-max-width {
-  max-width: 1200px;
+md-toolbar p,
+md-toolbar span,
+md-toolbar a {
+  font-family: Roboto Mono, 'Microsoft YaHei', sans-serif;
 }
 
+
+/*global layout*/
+
+.layout-max-width {
+  max-width: 1200px;
+  width: 100%;
+}
+
+
 /* styles for toolbar elements*/
-md-toolbar .title {
+
+md-toolbar .title-en {
   color: white;
-  font-size: 24px;
+  font-size: 18 px;
+  font-weight: bold;
+}
+
+md-toolbar .seperator {
+  color: white;
+  opacity: 0.5;
+  font-size: 30px;
+  margin: 0px 5px 0px 5px;
+}
+
+md-toolbar .title-ch {
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 3px;
 }
 
 md-toolbar .md-button a {
   color: white;
+  font-weight: bold;
 }
+
+
+/*styles for banner*/
+
+.md-banner {
+  height: 192px;
+  background: #00BCD4;
+}
+
+.md-banner .md-banner-title {
+  font-family: Roboto Mono, 'Microsoft YaHei', sans-serif;
+  color: white;
+  width: auto;
+  font-size: 56px;
+  margin-left: 24px;
+}
+
 
 /*styles for people page*/
-.people-card {
-}
-
 
 .card-media {
   background-color: #999999;
 }
-

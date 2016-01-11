@@ -1,6 +1,12 @@
 <!-- PeopleController as peopleCtrl -->
-<div id="container" layout="column" layout-align="start center" flex>
-  <div id="people-list" class="layout-max-width" layout="column" layout-align="start">
+<div id="banner" class="md-banner" layout="column" layout-align="start center">
+  <div class="layout-max-width" layout="row" layout-align="start center" style="height:100%">
+    <span class="md-banner-title">People</span>
+  </div>
+</div>
+
+<div layout="column" layout-align="start center" flex>
+  <div class="layout-max-width" layout="column" layout-align="start">
 
     <div ng-repeat="role in peopleCtrl.roles" layout="column" layout-align="start">
       <p class="md-title" layout="row" layout-align="center">{{peopleCtrl.roleNames[role]}}</p>
@@ -17,7 +23,7 @@
             </md-card-title-media>
           </md-card-title>
         </md-card>
-        
+
       </div>
     </div>
 
