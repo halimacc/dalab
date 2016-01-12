@@ -11,11 +11,15 @@
   dalabApp.config(['$routeProvider',
     function($routeProvider) {
       $routeProvider.when('/people', {
-        templateUrl: 'src/people/view/peopleList.html',
+        templateUrl: 'src/people/peopleList.html',
         controller: 'PeopleController',
         controllerAs: 'peopleCtrl'
+      }).when('/publication', {
+        templateUrl: 'src/publication/publicationlist.html',
+        controller: 'PublicationController',
+        controllerAs: 'publicationCtrl'
       }).otherwise({
-        redirectTo: '/people'
+        redirectTo: '/publication'
       });
     }
   ]);
