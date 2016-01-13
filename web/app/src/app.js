@@ -5,17 +5,20 @@
     'ngRoute',
     'ngMaterial',
 
-    'people'
+    'member',
+    'publication'
   ]);
+
+  dalabApp.value('serverUrl', 'http://localhost:1337');
 
   dalabApp.config(['$routeProvider',
     function($routeProvider) {
-      $routeProvider.when('/people', {
-        templateUrl: 'src/people/peopleList.html',
-        controller: 'PeopleController',
-        controllerAs: 'peopleCtrl'
+      $routeProvider.when('/member', {
+        templateUrl: 'src/member/member.html',
+        controller: 'MemberController',
+        controllerAs: 'memberCtrl'
       }).when('/publication', {
-        templateUrl: 'src/publication/publicationlist.html',
+        templateUrl: 'src/publication/publication.html',
         controller: 'PublicationController',
         controllerAs: 'publicationCtrl'
       }).otherwise({
@@ -27,8 +30,12 @@
   dalabApp.config(['$mdThemingProvider', '$mdIconProvider',
     function($mdThemingProvider, $mdIconProvider) {
       $mdThemingProvider.theme('default')
-        .primaryPalette('cyan')
-        .accentPalette('pink');
+        .primaryPalette('light-blue', {
+          default: '600'
+        })
+        .accentPalette('pink', {
+          default: '300'
+        });
     }
   ]);
 

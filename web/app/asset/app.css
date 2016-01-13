@@ -1,14 +1,19 @@
-/*global font*/
+/*font*/
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 p,
 span,
 a {
   font-family: Roboto, 'Microsoft YaHei', sans-serif;
 }
 
-md-toolbar p,
-md-toolbar span,
-md-toolbar a {
+.md-title,
+.md-headline {
   font-family: Roboto Mono, 'Microsoft YaHei', sans-serif;
 }
 
@@ -33,26 +38,19 @@ md-toolbar a {
 }
 
 
-/* styles for toolbar elements*/
+/* styles for md-toolbar*/
 
-md-toolbar .nav-title {
-  color: white;
-  font-size: 18 px;
+.md-toolbar-title a {
   font-weight: bold;
 }
 
-md-toolbar .nav-title.text-ch {
-  margin-bottom: 3px;
-}
-
-md-toolbar .nav-title.seperator {
+.md-toolbar-title-seperator {
   opacity: 0.5;
   font-size: 30px;
   margin: 0px 5px 0px 5px;
 }
 
-md-toolbar .md-button .nav-button {
-  color: white;
+.md-toolbar-nav .md-button * {
   font-weight: bold;
 }
 
@@ -61,15 +59,40 @@ md-toolbar .md-button .nav-button {
 
 .banner {
   height: 192px;
-  background: #00BCD4;
+  background: #039BE5;
+  margin-bottom: 12px;
 }
 
-.banner .banner-title {
+.banner-title {
   font-family: Roboto Mono, 'Microsoft YaHei', sans-serif;
   color: white;
-  width: auto;
   font-size: 56px;
-  margin-left: 24px;
+  padding-left: 24px;
+}
+
+
+/*styles for section*/
+
+.section-title {
+  padding-left: 24px;
+}
+
+
+/*styles for publication page*/
+
+.publication-cover {
+  width: 128px;
+  height: 128px;
+}
+
+.publication-content {
+  margin-left: 8px;
+}
+
+.publication-res-item {
+  min-width: 0px;
+  margin: 8px 8px 0px 0px;
+  padding: 0px 8px 0px 8px;
 }
 
 

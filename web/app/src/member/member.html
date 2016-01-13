@@ -1,0 +1,29 @@
+<div class="banner md-whiteframe-8dp" layout="column" layout-align="start center">
+  <span class="banner-title layout-max-width layout-match-parent" layout="row" layout-align="start center">Member</span>
+</div>
+
+<div layout="column" layout-align="start center">
+  <div class="layout-max-width layout-match-parent-horizontal" layout="column">
+
+    <div class="section" layout="column" ng-repeat="role in memberCtrl.roles">
+      <p class="md-title title" layout="row" layout-align="end">{{role}}</p>
+      <md-divider></md-divider>
+      <div layout="row" layout-wrap layout-align="start start">
+
+        <md-card flex-xs="100" flex-sm="45" flex="30" ng-repeat="member in memberCtrl.members | filter:role">
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">{{member.name}}</span>
+              <span class="md-subhead">{{member.title}}</span>
+            </md-card-title-text>
+            <md-card-title-media style="margin-left:16px ">
+              <div class="md-media-md card-media"></div>
+            </md-card-title-media>
+          </md-card-title>
+        </md-card>
+
+      </div>
+    </div>
+
+  </div>
+</div>

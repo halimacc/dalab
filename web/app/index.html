@@ -17,21 +17,19 @@
 
 <body layout="column">
   <!-- TOOLBAR -->
-  <md-toolbar layout="row" layout-align="center start" style="z-index:101;">
+  <md-toolbar layout="row" layout-align="center start">
     <div class="md-toolbar-tools layout-max-width">
-      <a class="nav-title" href="/#/">DIGITAL ART LAB</a>
-      <span class="nav-title seperator" href="/#/">·</span>
-      <a class="nav-title text-ch" href="/#/">数字艺术实验室</a>
+      <div class="md-toolbar-title" layout="row" layout-align="start center">
+        <a class="md-primary md-title" href="/#/">DIGITAL ART LAB</a>
+        <span class="md-toolbar-title-seperator" href="/#/">·</span>
+        <a class="md-title" href="/#/">数字艺术实验室</a>
+      </div>
       <span flex></span>
-      <md-button aria-label="Paper">
-        <a href="/#/paper" class="nav-button">Paper</a>
-      </md-button>
-      <md-button aria-label="Research">
-        <a href="/#/project" class="nav-button">Research</a>
-      </md-button>
-      <md-button aria-label="People">
-        <a href="/#/people" class="nav-button">People</a>
-      </md-button>
+      <div class="md-toolbar-nav" layout="row" layout-align="start center">
+        <md-button href="/#/publication">Publication</md-button>
+        <md-button href="/#/project">Research</md-button>
+        <md-button href="/#/member">Member</md-button>
+      </div>
     </div>
   </md-toolbar>
 
@@ -47,8 +45,8 @@
   <script src="./bower_components/angular-aria/angular-aria.js"></script>
   <script src="./bower_components/angular-material/angular-material.js"></script>
   <script src="./src/app.js"></script>
-  <script src="./src/people/People.js"></script>
-  <script src="./src/people/PeopleController.js"></script>
+  <script src="./src/member/Member.js"></script>
+  <script src="./src/member/MemberController.js"></script>
   <script src="./src/publication/Publication.js"></script>
   <script src="./src/publication/PublicationController.js"></script>
 </body>

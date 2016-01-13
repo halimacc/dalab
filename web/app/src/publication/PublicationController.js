@@ -1,12 +1,12 @@
-(function(){
+(function() {
   'use strict';
 
-  angular.module('paper')
-    .controller('PaperController', ['Paper', PaperController]);
+  angular.module('publication')
+    .controller('PublicationController', ['Publication', PublicationController]);
 
-  function PaperController(Paper) {
+  function PublicationController(Publication) {
     var self = this;
 
-    self.paper = Paper.query();
+    self.publications = Publication.query();
   }
 })();
