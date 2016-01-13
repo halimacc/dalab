@@ -29,6 +29,7 @@
   },
   "scripts": {
     "debug": "node debug app.js",
+    "prestart": "npm install",
     "start": "node app.js"
   },
   "main": "app.js",
