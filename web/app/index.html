@@ -15,9 +15,9 @@
   <!--STYLES-->
 </head>
 
-<body layout="column">
+<body layout="column" scroll-position="scroll">
   <!-- TOOLBAR -->
-  <md-toolbar layout="row" layout-align="center start">
+  <md-toolbar layout="row" layout-align="center start" ng-class="{'md-whiteframe-8dp': scroll >= 192}">
     <div class="md-toolbar-tools layout-max-width">
       <div class="md-toolbar-title" layout="row" layout-align="start center">
         <a class="md-primary md-title" href="/#/">DIGITAL ART LAB</a>
@@ -25,16 +25,21 @@
         <a class="md-title" href="/#/">数字艺术实验室</a>
       </div>
       <span flex></span>
-      <div class="md-toolbar-nav" layout="row" layout-align="start center">
+      <div class="md-toolbar-nav" layout="row" layout-align=  "start center">
         <md-button href="/#/publication">Publication</md-button>
-        <md-button href="/#/project">Research</md-button>
         <md-button href="/#/member">Member</md-button>
       </div>
     </div>
   </md-toolbar>
 
+
+
   <!-- VIEW -->
-  <md-content id="content" ng-view></md-content>
+  <md-content id="content">
+    <div ng-view></div>
+  </md-content>
+
+  <span>{{scroll}}</span>
 
   <!-- SCRIPTS -->
   <script src="./bower_components/jquery/dist/jquery.js"></script>
@@ -45,6 +50,7 @@
   <script src="./bower_components/angular-aria/angular-aria.js"></script>
   <script src="./bower_components/angular-material/angular-material.js"></script>
   <script src="./src/app.js"></script>
+  <script src="./src/directives.js"></script>
   <script src="./src/member/Member.js"></script>
   <script src="./src/member/MemberController.js"></script>
   <script src="./src/publication/Publication.js"></script>
