@@ -7,6 +7,8 @@
   function PublicationController(Publication) {
     var self = this;
 
+    self.years = [];
     self.publications = Publication.query();
+
   }
 })();

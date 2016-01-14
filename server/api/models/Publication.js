@@ -23,10 +23,11 @@ module.exports = {
       required: true
     },
 
-    publication: {
+    journal: {
       type: 'string',
       required: true
     }
+
   }
 };
 

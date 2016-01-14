@@ -5,24 +5,26 @@
 <div layout="column" layout-align="start center">
   <div class="layout-max-width layout-match-parent-horizontal" layout="column">
 
-    <div class="section" ng-repeat="i in [0, 1]">
-      <p class="md-title section-title" layout="row" layout-align="end">2015</p>
-      <md-divider></md-divider>
+    <div layout="column" ng-repeat="pub in publicationCtrl.publications | orderBy: '-year'">
+      <div ng-if="publicationCtrl.publications[$index].year != publicationCtrl.publications[$index - 1].year">
+        <p class="md-title section-title" layout="row" layout-align="end">{{pub.year}}</p>
+        <md-divider></md-divider>
+      </div>
 
-      <div class="publication" layout="row" layout-padding ng-repeat="i in [0, 1, 2, 3]">
+      <div class="publication" layout="row" layout-align="start" layout-padding>
         <img class="publication-cover" ng-src="./asset/img/reduced_hair.jpg">
         <div class="publication-content" layout="column" layout-align="center">
-          <span class="md-headline">A Reduced Model for Interactive Hairs</span>
-          <span class="md-subhead">Chai Menglei, Zheng Changxi, Zhou Kun</span>
-          <span class="md-subhead">ACM Transactions on Graphics (SIGGRAPH 2014)</span>
+          <span class="md-headline">{{pub.title}}</span>
+          <span class="md-subhead">{{pub.authors}}</span>
+          <span class="md-subhead">{{pub.journal}}</span>
           <div class="publication-res" layout="row">
-            <md-button class="md-raised md-accent publication-res-item">pdf</md-button>
-            <md-button class="md-raised md-accent publication-res-item">video</md-button>
-            <md-button class="md-raised md-accent publication-res-item">data </md-button>
+            <md-button class="md-accent publication-res-item">pdf</md-button>
+            <md-button class="md-accent publication-res-item">video</md-button>
+            <md-button class="md-accent publication-res-item">data </md-button>
           </div>
         </div>
       </div>
-
     </div>
+
   </div>
 </div>
