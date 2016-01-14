@@ -15,7 +15,7 @@
   <!--STYLES-->
 </head>
 
-<body layout="column" scroll-position="scroll">
+<body layout="column" my-scroll-top="content">
   <!-- TOOLBAR -->
   <md-toolbar layout="row" layout-align="center start" ng-class="{'md-whiteframe-8dp': scroll >= 192}">
     <div class="md-toolbar-tools layout-max-width">
@@ -38,8 +38,6 @@
   <md-content id="content">
     <div ng-view></div>
   </md-content>
-
-  <span>{{scroll}}</span>
 
   <!-- SCRIPTS -->
   <script src="./bower_components/jquery/dist/jquery.js"></script>

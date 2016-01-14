@@ -1,16 +1,15 @@
 (function() {
   angular.module('dalabApp')
-    .directive('scrollPosition', ['$window', function($window) {
+    .directive('myScrollTop', ['$window', function($window) {
       return {
-        scope: {
-          scroll: '=scrollPosition'
-        },
+        restrict: 'A',
         link: function(scope, element, attrs) {
-          var content = $window.$('#content');
+          var scrollee = attrs['myScrollTop'];
+          var scrolleeElement = $window.$('#' + scrollee);
           var handler = function() {
-            scope.scroll = content.scrollTop();
+            scope.scroll = scrolleeElement.scrollTop();
           }
-          content.on('scroll', scope.$apply.bind(scope, handler));
+          scrolleeElement.on('scroll', scope.$apply.bind(scope, handler));
           handler();
         }
       };
