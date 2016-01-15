@@ -18,16 +18,16 @@
   <!-- TOOLBAR -->
   <md-toolbar layout="row" layout-align="center start" ng-class="{'md-whiteframe-8dp': scrollContent >= 192}">
     <div class="md-toolbar-tools layout-max-width">
-      <div class="md-toolbar-title" layout="row" layout-align="start center" ng-style="{opacity: Math.max(mainRoute != '', (16 * Math.pow(scrollContent / 192, 2) - 1) / 15)}">
-        <a class="md-primary md-title" href="/#/">Digital Art Lab</a>
-        <span class="md-toolbar-title-seperator" href="/#/">·</span>
+      <div class="da-toolbar-title" layout="row" layout-align="start center" ng-style="{opacity: Math.max(mainRoute != '', (16 * Math.pow(scrollContent / 192, 2) - 1) / 15)}">
+        <a class="md-title" href="/#/">Digital Art Lab</a>
+        <span class="da-toolbar-title-seperator" href="/#/">·</span>
         <a class="md-title" href="/#/">数字艺术实验室</a>
       </div>
       <span flex></span>
-      <div class="md-toolbar-nav" layout="row" layout-align="start center">
-        <md-button href="/#/publication">Publication</md-button>
-        <md-button href="/#/project">Project</md-button>
-        <md-button href="/#/member">Member</md-button>
+      <div layout="row" class="da-toolbar-nav" layout-align="start center">
+        <a class="da-toolbar-nav-button" layout="column" layout-align="center center" ng-class="{light: light, dark: !light, active: route == mainRoute}" ng-href="/#/{{route}}" ng-repeat="route in ['publication', 'project', 'member']">
+          {{route}}
+        </a>
       </div>
     </div>
   </md-toolbar>

@@ -40,18 +40,53 @@ a {
 
 /* styles for md-toolbar*/
 
-.md-toolbar-title a {
+.da-toolbar-title a {
   font-weight: bold;
 }
 
-.md-toolbar-title-seperator {
+.da-toolbar-title-seperator {
   opacity: 0.5;
   font-size: 30px;
   margin: 0px 5px 0px 5px;
 }
 
-.md-toolbar-nav .md-button * {
+.da-toolbar-nav {
+  height: 100%;
+}
+
+.da-toolbar-nav-button {
+  font-family: Roboto Mono, 'Microsoft YaHei', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
   font-weight: bold;
+  height: 100%;
+  padding: 0px 12px 0px 12px;
+  border-top: 2px none;
+  border-bottom: 2px none;
+}
+
+.da-toolbar-nav-button.light:hover {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 0.5);
+}
+
+.da-toolbar-nav-button.dark:hover {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+}
+
+.da-toolbar-nav-button.light.active {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255);
+}
+
+.da-toolbar-nav-button.dark.active {
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(0, 0, 0);
 }
 
 
@@ -106,9 +141,9 @@ a {
   height: 128px;
 }
 
+
 /*styles for project page*/
 
 .project-container {
   margin-top: 8px;
 }
-
