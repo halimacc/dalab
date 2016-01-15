@@ -14,11 +14,11 @@
   <link rel="stylesheet" href="./asset/app.css" />
 </head>
 
-<body layout="column" da-scroll-top="content" da-scroll-top-var="contentScrollTop">
+<body layout="column" da-window>
   <!-- TOOLBAR -->
-  <md-toolbar layout="row" layout-align="center start" ng-class="{'md-whiteframe-8dp': contentScrollTop >= 192}">
+  <md-toolbar layout="row" layout-align="center start" ng-class="{'md-whiteframe-8dp': scrollContent >= 192}">
     <div class="md-toolbar-tools layout-max-width">
-      <div class="md-toolbar-title" layout="row" layout-align="start center">
+      <div class="md-toolbar-title" layout="row" layout-align="start center" ng-style="{opacity: Math.max(mainRoute != '', (16 * Math.pow(scrollContent / 192, 2) - 1) / 15)}">
         <a class="md-primary md-title" href="/#/">Digital Art Lab</a>
         <span class="md-toolbar-title-seperator" href="/#/">·</span>
         <a class="md-title" href="/#/">数字艺术实验室</a>
@@ -33,7 +33,7 @@
   </md-toolbar>
 
   <!-- VIEW -->
-  <md-content id="content">
+  <md-content id="content" da-scroll-container="scrollContent">
     <div ng-view></div>
   </md-content>
 
@@ -46,8 +46,9 @@
   <script src="./bower_components/angular-aria/angular-aria.js"></script>
   <script src="./bower_components/angular-material/angular-material.js"></script>
   <script src="./src/app.js"></script>
-  <script src="./src/configuration.js"></script>
-  <script src="./src/directive.js"></script>
+  <script src="./src/themeConfig.js"></script>
+  <script src="./src/directives.js"></script>
+  <script src="./src/home/HomeController.js"></script>
   <script src="./src/member/Member.js"></script>
   <script src="./src/member/MemberController.js"></script>
   <script src="./src/publication/Publication.js"></script>

@@ -1,17 +1,29 @@
 (function() {
   var dalabApp = angular.module('dalabApp');
 
-  dalabApp.directive('daScrollTop', ['$window', function($window) {
+  dalabApp.directive('daWindow', ['$window',
+    function($window) {
+      return {
+        restrict: 'A',
+        scope: true,
+        link: function(scope, element, attrs) {
+          scope.$root.Math = $window.Math;
+        }
+      }
+    }
+  ]);
+
+  dalabApp.directive('daScrollContainer', [function() {
     return {
       restrict: 'A',
+      scope: true,
       link: function(scope, element, attrs) {
-        var scrollee = attrs['daScrollTop'];
-        var index = attrs['daScrollTopVar'];
-        var scrolleeElement = $window.$('#' + scrollee);
+        var index = attrs['daScrollContainer'];
+        var scrolleeElement = $(element);
         var handler = function() {
           if (index)
-            scope[index] = scrolleeElement.scrollTop();
-          else scope.scroll = scrolleeElement.scrollTop();
+            scope.$root[index] = scrolleeElement.scrollTop();
+          else scope.$root.scroll = scrolleeElement.scrollTop();
         }
         scrolleeElement.on('scroll', scope.$apply.bind(scope, handler));
         handler();
@@ -19,13 +31,13 @@
     };
   }]);
 
-
-  dalabApp.directive('mdPrimaryContrast', ['$window', 'uiConfig',
-    function($window, uiConfig) {
+  dalabApp.directive('mdPrimaryContrast', ['uiConfig',
+    function(uiConfig) {
       return {
         restrict: 'C',
+        scope: true,
         link: function(scope, element, attrs) {
-          var el = $window.$(element);
+          var el = $(element);
           var primaryColor = uiConfig.color.primary;
           var level = 'default';
           el.css('background', '#' + primaryColor.palette[primaryColor[level]]);

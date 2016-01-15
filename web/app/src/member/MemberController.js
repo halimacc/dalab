@@ -2,10 +2,13 @@
   'use strict';
 
   angular.module('member')
-    .controller('MemberController', ['Member', MemberController]);
+    .controller('MemberController', ['$scope', 'Member', MemberController]);
 
-  function MemberController(Member) {
+  function MemberController($scope, Member) {
     var self = this;
+
+    $scope.$root.mainRoute = 'member';
+    self.bannerTitle = "Member";
 
     self.roles = ['Faculty', 'Student'];
     self.members = Member.query();

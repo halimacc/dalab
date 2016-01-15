@@ -1,16 +1,14 @@
-<div class="da-banner md-primary-contrast md-whiteframe-8dp" layout="column" layout-align="start center">
-  <span class="da-banner-title md-primary-contrast layout-max-width layout-match-parent" layout="row" layout-align="start center">Member</span>
-</div>
+<div ng-include src="'src/partials/banner.html'"></div>
 
 <div layout="column" layout-align="start center">
   <div class="layout-max-width layout-match-parent-horizontal" layout="column">
 
-    <div layout="column" ng-repeat="role in memberCtrl.roles">
+    <div layout="column" ng-repeat="role in ctrl.roles">
       <p class="md-title da-section-title" layout="row" layout-align="end">{{role}}</p>
       <md-divider class="da-section-divider"></md-divider>
       <div layout="row" layout-wrap layout-align="start start">
 
-        <md-card flex-xs="100" flex-sm="45" flex="30" ng-repeat="member in memberCtrl.members | filter:role">
+        <md-card flex-xs="100" flex-sm="45" flex="30" ng-repeat="member in ctrl.members | filter:role">
           <md-card-title>
             <md-card-title-text>
               <span class="md-headline">{{member.name}}</span>

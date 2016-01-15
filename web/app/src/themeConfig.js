@@ -3,30 +3,6 @@
   /* App Module */
   var dalabApp = angular.module('dalabApp');
 
-  // Routing 
-  dalabApp.config(['$routeProvider',
-    function($routeProvider) {
-      $routeProvider.when('/', {
-        templateUrl: 'src/homepage.html'
-      }).when('/member', {
-        templateUrl: 'src/member/member.html',
-        controller: 'MemberController',
-        controllerAs: 'memberCtrl'
-      }).when('/publication', {
-        templateUrl: 'src/publication/publication.html',
-        controller: 'PublicationController',
-        controllerAs: 'publicationCtrl'
-      }).when('/project', {
-        templateUrl: 'src/project/project.html',
-        controller: 'ProjectController',
-        controllerAs: 'projectCtrl'
-      }).otherwise({
-        redirectTo: '/'
-      });
-    }
-  ]);
-
-  // Color & Theme & Layout
   var daColor = {
     primary: {
       name: 'da-primary',
@@ -56,7 +32,7 @@
     }
   };
 
-  // use object copy for define palette will change the palette object
+  // use object copy because define palette will change the palette object
   var daColorCp = jQuery.extend(true, {}, daColor);
 
   // config theme
@@ -77,13 +53,8 @@
     }
   ]);
 
-  dalabApp.value('serverUrl', 'http://localhost:1337');
 
   dalabApp.value('uiConfig', {
     color: daColor,
-    banner: {
-      height: 192,
-      whiteframe: 'md-whiteframe-8dp'
-    }
   });
 })();

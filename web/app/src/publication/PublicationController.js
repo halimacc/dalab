@@ -2,13 +2,14 @@
   'use strict';
 
   angular.module('publication')
-    .controller('PublicationController', ['Publication', PublicationController]);
+    .controller('PublicationController', ['$scope', 'Publication', PublicationController]);
 
-  function PublicationController(Publication) {
+  function PublicationController($scope, Publication) {
     var self = this;
 
-    self.years = [];
-    self.publications = Publication.query();
+    $scope.$root.mainRoute = 'publication';
+    self.bannerTitle = "Publication";
 
+    self.publications = Publication.query();
   }
 })();
