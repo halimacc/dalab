@@ -1,10 +1,10 @@
 (function() {
   'use strict';
 
-  angular.module('publication', ['ngResource'])
-    .factory('Publication', ['$resource', 'serverUrl',
+  angular.module('project', ['ngResource'])
+    .factory('Project', ['$resource', 'serverUrl',
       function($resource, serverUrl) {
-        return $resource(serverUrl + '/publication/:publicationId', {}, {
+        return $resource(serverUrl + '/project/:projectId', {}, {
           query: {
             method: 'GET',
             isArray: true

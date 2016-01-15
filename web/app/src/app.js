@@ -6,7 +6,8 @@
     'ngMaterial',
 
     'member',
-    'publication'
+    'publication',
+    'project'
   ]);
 
   dalabApp.value('serverUrl', 'http://localhost:1337');
@@ -21,6 +22,10 @@
         templateUrl: 'src/publication/publication.html',
         controller: 'PublicationController',
         controllerAs: 'publicationCtrl'
+      }).when('/project', {
+        templateUrl: 'src/project/project.html',
+        controller: 'ProjectController',
+        controllerAs: 'projectCtrl'
       }).otherwise({
         redirectTo: '/publication'
       });

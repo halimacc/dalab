@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular.module('member', ['ngResource', 'ngMaterial'])
+  angular.module('member', ['ngResource'])
     .factory('Member', ['$resource', 'serverUrl',
       function($resource, serverUrl) {
         return $resource(serverUrl + '/user/:userId', {}, {

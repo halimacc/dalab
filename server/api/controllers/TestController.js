@@ -101,6 +101,14 @@ var publications = [{
   journal: 'IEEE Transactions on Visualization and Computer Graphics'
 }];
 
+var projects = [{
+  name: 'Anti-Terrorist Training System',
+  abstract: 'ATTS is a mixed-reality project for anti-terrorist action training.'
+}, {
+  name: 'Anti Plane-Hijack System',
+  abstract: 'ATTS is a mixed-reality project for anti-terrorist action training.'
+}];
+
 module.exports = {
   importTestData: coExpress(function*(req, res) {
     for (var i = 0; i < users.length; ++i) {
@@ -116,6 +124,14 @@ module.exports = {
         title: pub.title
       }, pub);
     }
+
+    for (var i = 0; i < projects.length; ++i) {
+      var project = projects[i];
+      var createdProject = yield Project.findOrCreate({
+        name: project.name
+      }, project);
+    }
+
     res.ok();
   })
 };

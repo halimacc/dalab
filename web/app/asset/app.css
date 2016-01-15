@@ -77,6 +77,10 @@ a {
   padding-left: 24px;
 }
 
+.section-divider {
+  margin-bottom: 8px;
+}
+
 
 /*styles for publication page*/
 
@@ -97,8 +101,16 @@ a {
 }
 
 
-/*styles for people page*/
+/*styles for member page*/
 
-.card-media {
-  background-color: #999999;
+.member-avatar {
+  width: 128px;
+  height: 128px;
 }
+
+/*styles for project page*/
+
+.project-container {
+  margin-top: 8px;
+}
+
