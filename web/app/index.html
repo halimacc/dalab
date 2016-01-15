@@ -8,16 +8,15 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+  <!-- STYLES -->
   <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css" />
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,700|Roboto%20Mono:400,700' />
   <link rel="stylesheet" href="./asset/app.css" />
-
-  <!--STYLES-->
 </head>
 
-<body layout="column" my-scroll-top="content">
+<body layout="column" da-scroll-top="content" da-scroll-top-var="contentScrollTop">
   <!-- TOOLBAR -->
-  <md-toolbar layout="row" layout-align="center start" ng-class="{'md-whiteframe-8dp': scroll >= 192}">
+  <md-toolbar layout="row" layout-align="center start" ng-class="{'md-whiteframe-8dp': contentScrollTop >= 192}">
     <div class="md-toolbar-tools layout-max-width">
       <div class="md-toolbar-title" layout="row" layout-align="start center">
         <a class="md-primary md-title" href="/#/">Digital Art Lab</a>
@@ -33,7 +32,6 @@
     </div>
   </md-toolbar>
 
-
   <!-- VIEW -->
   <md-content id="content">
     <div ng-view></div>
@@ -48,7 +46,8 @@
   <script src="./bower_components/angular-aria/angular-aria.js"></script>
   <script src="./bower_components/angular-material/angular-material.js"></script>
   <script src="./src/app.js"></script>
-  <script src="./src/directives.js"></script>
+  <script src="./src/configuration.js"></script>
+  <script src="./src/directive.js"></script>
   <script src="./src/member/Member.js"></script>
   <script src="./src/member/MemberController.js"></script>
   <script src="./src/publication/Publication.js"></script>

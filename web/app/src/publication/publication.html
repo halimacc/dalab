@@ -1,5 +1,5 @@
-<div id="banner" class="banner md-whiteframe-8dp" layout="column" layout-align="start center">
-  <span class="banner-title layout-max-width layout-match-parent" layout="row" layout-align="start center">Publication</span>
+<div class="da-banner md-primary-contrast md-whiteframe-8dp" layout="column" layout-align="start center">
+  <span class="da-banner-title md-primary-contrast layout-max-width layout-match-parent" layout="row" layout-align="start center">Publication</span>
 </div>
 
 <div layout="column" layout-align="start center">
@@ -7,7 +7,7 @@
 
     <div layout="column" ng-repeat="pub in publicationCtrl.publications | orderBy: '-year'">
       <div ng-if="publicationCtrl.publications[$index].year != publicationCtrl.publications[$index - 1].year">
-        <p class="md-title section-title" layout="row" layout-align="end">{{pub.year}}</p>
+        <p class="md-title da-section-title" layout="row" layout-align="end">{{pub.year}}</p>
         <md-divider></md-divider>
       </div>
 

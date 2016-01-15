@@ -57,15 +57,13 @@ a {
 
 /*styles for banner*/
 
-.banner {
+.da-banner {
   height: 192px;
-  background: #039BE5;
   margin-bottom: 12px;
 }
 
-.banner-title {
+.da-banner-title {
   font-family: Roboto Mono, 'Microsoft YaHei', sans-serif;
-  color: white;
   font-size: 56px;
   padding-left: 24px;
 }
@@ -73,11 +71,11 @@ a {
 
 /*styles for section*/
 
-.section-title {
-  padding-left: 24px;
+.da-section-title {
+  padding-right: 24px;
 }
 
-.section-divider {
+.da-section-divider {
   margin-bottom: 8px;
 }
 
