@@ -4,6 +4,7 @@
   var dalabApp = angular.module('dalabApp', [
     'ngRoute',
     'ngMaterial',
+    'daSlide',
 
     'member',
     'publication',

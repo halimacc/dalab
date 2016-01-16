@@ -1,0 +1,24 @@
+.da-slide-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.da-slide-control {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  z-index: 100;
+}
+
+.da-slide-content {
+  position: absolute;
+  width: 100%;
+  height: 10000px;
+  z-index: 99;
+}
+
+.da-slide {
+  float: top;
+  width: 100%;
+}

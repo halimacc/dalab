@@ -92,6 +92,10 @@ a {
 
 /*styles for banner*/
 
+.da-home-banner {
+  height: 192px;
+}
+
 .da-banner {
   height: 192px;
   margin-bottom: 12px;
@@ -118,14 +122,12 @@ a {
 .da-carousel-control {
   position: absolute;
   bottom: 0;
-  z-index: 101;
 }
 
 .da-carousel-content {
   height: 100%;
   position: absolute;
   width: 10000px;
-  z-index: 100;
 }
 
 .da-carousel-item {

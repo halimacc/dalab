@@ -1,21 +1,37 @@
-<div ng-include src="'src/partials/banner.html'"></div>
+<div class="da-slide-container" ng-style="daSlide.containerStyle">
+  <div class="da-slide-control" layout="column" layout-align="center">
+    <md-radio-group ng-model="daSlide.slideIndex">
+      <md-radio-button value="{{i}}" ng-repeat="i in [] | range:daSlide.slideCount"></md-radio-button>
+    </md-radio-group>
+    {{daSlide.slideIndex}}
+  </div>
+  <div class="da-slide-content" ng-style="daSlide.contentStyle">
+    <div class="da-slide" style="background: {{color}}" ng-style="daSlide.slideStyle" ng-repeat="color in ['red', 'green', 'blue']"></div>
+  </div>
+  <!-- first page -->
+  <!-- <div class="da-slide md-primary-contrast">
 
-<div layout="column" layout-align="start center">
-  <div class="layout-max-width layout-match-parent-horizontal" layout="column" layout-align="start center">
-    <!-- <div class="da-carousel">
-      <div class="da-carousel-control layout-match-parent-horizontal" layout="row">
-        <md-button ng-click="daCarousel.slide(-1)">Prev</md-button>
-        <div flex></div>
-        <md-button ng-click="daCarousel.slide(1)">Next</md-button>
-      </div>
-      <div class="da-carousel-content" ng-style="daCarousel.contentStyle">
-        <div class="da-carousel-item"ng-style="daCarousel.itemStyle" ng-repeat="img in ['default_avatar.png', 'reduced_hair.jpg', 'washedout.png']">
-          <div class="layout-match-parent" ng-style="{'background-image': 'url(asset/img/{{img}})'}"></div>
-        </div>
-      </div>
-    </div> -->
+    <div class="da-home-banner" layout="column" layout-align="start center">
+      <span class="da-banner-title layout-max-width layout-match-parent" layout="row" layout-align="start center" ng-style="{opacity: 1 - 16 * Math.pow(scrollContent / 192, 2)}">
+    Digital Art Lab
+  </span>
+    </div>
 
     <div layout="column" layout-align="start center">
+      <div class="layout-max-width layout-match-parent-horizontal" layout="column" layout-align="start center">
+        <div class="da-carousel md-whiteframe-4dp">
+          <div class="da-carousel-control layout-match-parent-horizontal" layout="row">
+            <md-button ng-click="daCarousel.slide(-1)">Prev</md-button>
+            <div flex></div>
+            <md-button ng-click="daCarousel.slide(1)">Next</md-button>
+          </div>
+          <div class="da-carousel-content" ng-style="daCarousel.contentStyle">
+            <div class="da-carousel-item" ng-style="daCarousel.itemStyle" ng-repeat="img in ['default_avatar.png', 'reduced_hair.jpg', 'washedout.png']">
+              <div class="layout-match-parent" ng-style="{'background-image': 'url(asset/img/{{img}})'}"></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </div> -->
 </div>
