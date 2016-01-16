@@ -65,13 +65,13 @@ a {
   border-bottom: 2px none;
 }
 
-.da-toolbar-nav-button.light:hover {
+.da-toolbar-nav-button.light:not(.active):hover {
   border-top-style: solid;
   border-bottom-style: solid;
   border-bottom-color: rgba(255, 255, 255, 0.5);
 }
 
-.da-toolbar-nav-button.dark:hover {
+.da-toolbar-nav-button.dark:not(.active):hover {
   border-top-style: solid;
   border-bottom-style: solid;
   border-bottom-color: rgba(0, 0, 0, 0.5);
@@ -101,6 +101,36 @@ a {
   font-family: Roboto Mono, 'Microsoft YaHei', sans-serif;
   font-size: 56px;
   padding-left: 24px;
+}
+
+
+/*styles for carousel*/
+
+.da-carousel {
+  width: 100%;
+  height: 512px;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  overflow: hidden;
+}
+
+.da-carousel-control {
+  position: absolute;
+  bottom: 0;
+  z-index: 101;
+}
+
+.da-carousel-content {
+  height: 100%;
+  position: absolute;
+  width: 10000px;
+  z-index: 100;
+}
+
+.da-carousel-item {
+  height: 100%;
+  float: left;
 }
 
 
