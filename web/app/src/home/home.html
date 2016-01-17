@@ -1,37 +1,54 @@
-<div class="da-slide-container" ng-style="daSlide.containerStyle">
-  <div class="da-slide-control" layout="column" layout-align="center">
-    <md-radio-group ng-model="daSlide.slideIndex">
-      <md-radio-button value="{{i}}" ng-repeat="i in [] | range:daSlide.slideCount"></md-radio-button>
-    </md-radio-group>
-    {{daSlide.slideIndex}}
-  </div>
-  <div class="da-slide-content" ng-style="daSlide.contentStyle">
-    <div class="da-slide" style="background: {{color}}" ng-style="daSlide.slideStyle" ng-repeat="color in ['red', 'green', 'blue']"></div>
-  </div>
-  <!-- first page -->
-  <!-- <div class="da-slide md-primary-contrast">
+<div ng-include src="'src/view/partials/banner.html'"></div>
 
-    <div class="da-home-banner" layout="column" layout-align="start center">
-      <span class="da-banner-title layout-max-width layout-match-parent" layout="row" layout-align="start center" ng-style="{opacity: 1 - 16 * Math.pow(scrollContent / 192, 2)}">
-    Digital Art Lab
-  </span>
+<div layout="column" layout-align="start center">
+  <div class="layout-max-width layout-match-parent-horizontal" layout="column" layout-align="start">
+    <div class="da-section home-intro" layout="column" flex>
+      <p class="md-title da-section-text">Introduction</p>
+      <p class="da-section-text">Angular computes updates based on changes to data, not DOM, for fast updates that scale to the largest data sets with minimal memory overhead. With Angular Universal for server-side rendering and Web Workers for smooth scrolling and transitions, Angular 2 solves the core challenges in mobile web performance. Supports several languages including plain JavaScript, TypeScript, and Dart. Also supports both object-style data structure with POJO data-binding and functional reactive style with unidirectional data flow and support for observables and immutable data structures.</p>
     </div>
+    <!-- project thumb -->
+    <div class="da-section home-project-thumb" layout="column" flex>
+      <div class='da-section-text' layout="row">
+        <p class="md-title">Projects</p>
+        <span flex></span>
+        <md-button class="md-accent">View More</md-button>
+      </div>
 
-    <div layout="column" layout-align="start center">
-      <div class="layout-max-width layout-match-parent-horizontal" layout="column" layout-align="start center">
-        <div class="da-carousel md-whiteframe-4dp">
-          <div class="da-carousel-control layout-match-parent-horizontal" layout="row">
-            <md-button ng-click="daCarousel.slide(-1)">Prev</md-button>
-            <div flex></div>
-            <md-button ng-click="daCarousel.slide(1)">Next</md-button>
-          </div>
-          <div class="da-carousel-content" ng-style="daCarousel.contentStyle">
-            <div class="da-carousel-item" ng-style="daCarousel.itemStyle" ng-repeat="img in ['default_avatar.png', 'reduced_hair.jpg', 'washedout.png']">
-              <div class="layout-match-parent" ng-style="{'background-image': 'url(asset/img/{{img}})'}"></div>
-            </div>
+      <div class="project-container" layout="row" layout-wrap layout-align="start start">
+        <md-card flex-xs="100" flex-sm="45" flex="30" ng-repeat="i in [0, 1]">
+          <img src="asset/img/washedout.png" class="md-card-image" alt="Washed Out">
+          <md-card-title>
+            <md-card-title-text>
+              <span class="md-headline">Project Name</span>
+            </md-card-title-text>
+          </md-card-title>
+          <md-card-content>
+            <p>Angular computes updates based on changes to data, not DOM, for fast updates that scale to the largest data sets with minimal memory overhead.</p>
+          </md-card-content>
+        </md-card>
+      </div>
+    </div>
+    <!-- publication thumb -->
+    <div class="da-section home-publication-thumb" layout="column" flex>
+      <div class='da-section-text' layout="row">
+        <p class="md-title">Publications</p>
+        <span flex></span>
+        <md-button class="md-accent">View More</md-button>
+      </div>
+
+      <div class="publication" layout="row" layout-align="start" layout-padding ng-repeat="i in [0, 1]">
+        <img class="publication-cover" ng-src="./asset/img/reduced_hair.jpg">
+        <div class="publication-content" layout="column" layout-align="center">
+          <span class="md-headline">Publication Title</span>
+          <span class="md-subhead">Publication Author1, Publication Author2</span>
+          <span class="md-subhead">Publication Journal</span>
+          <div class="publication-res" layout="row">
+            <md-button class="md-accent publication-res-item">pdf</md-button>
+            <md-button class="md-accent publication-res-item">video</md-button>
+            <md-button class="md-accent publication-res-item">data </md-button>
           </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 </div>

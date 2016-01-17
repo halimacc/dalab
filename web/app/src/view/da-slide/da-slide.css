@@ -21,4 +21,5 @@
 .da-slide {
   float: top;
   width: 100%;
+  overflow: hidden;
 }

@@ -5,7 +5,7 @@
 
     <div layout="column" ng-repeat="pub in ctrl.publications | orderBy: '-year'">
       <div ng-if="ctrl.publications[$index].year != ctrl.publications[$index - 1].year">
-        <p class="md-title da-section-title" layout="row" layout-align="end">{{pub.year}}</p>
+        <p class="md-title da-section-text" layout="row" layout-align="end">{{pub.year}}</p>
         <md-divider></md-divider>
       </div>
 

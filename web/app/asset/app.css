@@ -108,42 +108,25 @@ a {
 }
 
 
-/*styles for carousel*/
-
-.da-carousel {
-  width: 100%;
-  height: 512px;
-  padding: 0px 0px 0px 0px;
-  margin: 0px 0px 0px 0px;
-  position: relative;
-  overflow: hidden;
-}
-
-.da-carousel-control {
-  position: absolute;
-  bottom: 0;
-}
-
-.da-carousel-content {
-  height: 100%;
-  position: absolute;
-  width: 10000px;
-}
-
-.da-carousel-item {
-  height: 100%;
-  float: left;
-}
-
-
 /*styles for section*/
 
-.da-section-title {
-  padding-right: 24px;
+.da-section {
+  padding-bottom: 60px;
+}
+
+.da-section-text {
+  padding: 0px 24px 0px 24px;
 }
 
 .da-section-divider {
   margin-bottom: 8px;
+}
+
+
+/*styles for home page*/
+
+.home-intro {
+  padding: 36px 0px 0px 0px;
 }
 
 
