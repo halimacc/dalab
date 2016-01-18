@@ -10,11 +10,10 @@
     <div class="da-section home-project-thumb" layout="column" flex>
       <div class='da-section-text' layout="row">
         <p class="md-title">Projects</p>
-        <span flex></span>
-        <md-button class="md-accent">View More</md-button>
+
       </div>
 
-      <div class="project-container" layout="row" layout-wrap layout-align="start start">
+      <div layout="row" layout-wrap layout-align="start start">
         <md-card flex-xs="100" flex-sm="45" flex="30" ng-repeat="i in [0, 1]">
           <img src="asset/img/washedout.png" class="md-card-image" alt="Washed Out">
           <md-card-title>
@@ -27,13 +26,15 @@
           </md-card-content>
         </md-card>
       </div>
+
+      <div class="da-section-text">
+        <md-button class="md-accent">View More</md-button>
+      </div>
     </div>
     <!-- publication thumb -->
     <div class="da-section home-publication-thumb" layout="column" flex>
       <div class='da-section-text' layout="row">
         <p class="md-title">Publications</p>
-        <span flex></span>
-        <md-button class="md-accent">View More</md-button>
       </div>
 
       <div class="publication" layout="row" layout-align="start" layout-padding ng-repeat="i in [0, 1]">
@@ -48,6 +49,10 @@
             <md-button class="md-accent publication-res-item">data </md-button>
           </div>
         </div>
+      </div>
+
+      <div class="da-section-text">
+        <md-button class="md-accent">View More</md-button>
       </div>
     </div>
   </div>
