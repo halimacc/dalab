@@ -162,3 +162,13 @@ a {
 .project-container {
   margin-top: 8px;
 }
+
+
+/* MANAGEMENT*/
+.login-container {
+  padding-top: 36px;
+}
+
+md-input-container {
+  margin-bottom: 0px;
+}

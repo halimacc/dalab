@@ -1,6 +1,6 @@
 /* this policy was used to verify is the operating user admin
  */
-module.exports = coExpress(function*(req, res) {
+module.exports = coExpress(function*(req, res, next) {
   var user = req.body && req.body.dalabUser;
   if (!user || !user.isAdmin)
     return res.status(401).json({

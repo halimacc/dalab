@@ -1,0 +1,19 @@
+<div class="login-container layout-match-parent" layout="column" layout-align="start center">
+  <form name="loginForm">
+    <md-input-container class="md-block">
+      <label>Username</label>
+      <input required name="username" ng-model="ctrl.username">
+      <div ng-messages="loginForm.username.$error">
+        <div ng-message="required">Username is required.</div>
+      </div>
+    </md-input-container>
+    <md-input-container class="md-block">
+      <label>Password</label>
+      <input required name="password" ng-model="ctrl.password" type="password">
+      <div ng-messages="loginForm.password.$error">
+        <div ng-message="required">Password is required.</div>
+      </div>
+    </md-input-container>
+    <md-button class="md-raised md-primary" ng-click="ctrl.login()">Login</md-button>
+  </form>
+</div>

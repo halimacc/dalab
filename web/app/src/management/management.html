@@ -1,0 +1,31 @@
+<div layout="column" layout-align="start center">
+  <div class="layout-max-width layout-match-parent" layout="column" layout-align="start center">
+    <md-tabs class="layout-match-parent" md-dynamic-height md-border-bottom>
+      <md-tab class="" label="Profile">
+        <div class="md-padding" layout="column" layout-align="start">
+          <div>
+            <md-input-container class="md-block">
+              <label>USERNAME</label>
+              <input ng-model="user.address" disabled>
+            </md-input-container>
+          </div>
+
+          <div ng-repeat="key in ['name', 'email', 'telephone', 'title', 'link']">
+            <md-input-container class="md-block">
+              <label>{{key | uppercase}}</label>
+              <input ng-model="ctrl.management.user[key]">
+            </md-input-container>
+          </div>
+
+          <div>
+            <md-button class="md-raised md-primary" disabled>Save</md-button>
+          </div>
+
+          <div>
+            <md-button class="md-raised md-primary">Change Password</md-button>
+          </div>
+        </div>
+      </md-tab>
+    </md-tabs>
+  </div>
+</div>

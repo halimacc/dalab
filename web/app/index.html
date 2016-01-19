@@ -35,7 +35,7 @@
 
   <!-- VIEW -->
   <md-content id="content" class="layout-match-parent" da-scroll-container="scrollContent">
-    <div ng-view></div>
+    <div ng-view ng-cloak></div>
   </md-content>
 
   <!-- SCRIPTS -->
@@ -45,15 +45,15 @@
   <script src="./bower_components/angular-resource/angular-resource.js"></script>
   <script src="./bower_components/angular-animate/angular-animate.js"></script>
   <script src="./bower_components/angular-aria/angular-aria.js"></script>
+  <script src="./bower_components/angular-messages/angular-messages.js"></script>
   <script src="./bower_components/angular-material/angular-material.js"></script>
 
   <script src="./src/app.js"></script>
+  <script src="./src/routeConfig.js"></script>
+  <script src="./src/services.js"></script>
   <script src="./src/themeConfig.js"></script>
   <script src="./src/directives.js"></script>
-  <script src="./src/filters.js"></script>
- 
-  <script src="./src/view/da-slide/directives.js"></script>
-
+  <!-- FUNCTIONAL MODULES -->
   <script src="./src/home/HomeController.js"></script>
   <script src="./src/member/Member.js"></script>
   <script src="./src/member/MemberController.js"></script>
@@ -61,6 +61,8 @@
   <script src="./src/publication/PublicationController.js"></script>
   <script src="./src/project/Project.js"></script>
   <script src="./src/project/ProjectController.js"></script>
+  <script src="./src/management/Management.js"></script>
+  <script src="./src/management/ManagementController.js"></script>
 </body>
 
 </html>
