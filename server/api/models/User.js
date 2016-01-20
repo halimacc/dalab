@@ -41,7 +41,7 @@ module.exports = {
       type: 'string'
     },
 
-    link: {
+    homepage: {
       type: 'string'
     },
 
