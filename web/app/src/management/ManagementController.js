@@ -7,7 +7,7 @@
   function ManagementController($scope, $templateCache, Management) {
     var self = this;
 
-    self.authorities = ['user', 'profile'];
+    self.authorities = ['publication', 'project', 'member', 'profile'];
     self.random = $scope.Math.random();
 
 
