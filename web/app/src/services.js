@@ -16,5 +16,24 @@
     }
   ]);
 
+  api.factory('Publication', ['$resource', 'serverUrl',
+    function($resource, serverUrl) {
+      return $resource(serverUrl + '/publication/:publicationId', {}, {});
+    }
+  ]);
+
+  api.factory('Project', ['$resource', 'serverUrl',
+    function($resource, serverUrl) {
+      return $resource(serverUrl + '/project/:projectId', {}, {});
+    }
+  ]);
+
+  api.factory('Management', ['$resource', 'serverUrl',
+    function($resource, serverUrl) {
+      return $resource(serverUrl + '/management/:managementId', {
+        managementId: 'default'
+      }, {});
+    }
+  ]);
 
 })();

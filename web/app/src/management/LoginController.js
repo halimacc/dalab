@@ -2,27 +2,6 @@
   'use strict';
 
   angular.module('management')
-    .controller('ManagementController', ['$scope', '$templateCache', 'Management', ManagementController]);
-
-  function ManagementController($scope, $templateCache, Management) {
-    var self = this;
-
-    self.authorities = ['publication'];
-    self.random = $scope.Math.random();
-
-
-    Management.get().$promise.then(function(management) {
-      self.user = management.user;
-    });
-
-    self.getTabPath = function(key) {
-      return '/src/management/tabs/' + key + '.html' + '?r=' + self.random;
-    }
-  }
-
-
-  // login controller
-  angular.module('management')
     .controller('LoginController', ['User', '$location', '$mdToast', LoginController]);
 
   function LoginController(User, $location, $mdToast) {

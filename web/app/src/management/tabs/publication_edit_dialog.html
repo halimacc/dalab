@@ -1,0 +1,29 @@
+<md-dialog aria-label="Publication Edit" ng-cloak style="width:100%">
+  <form>
+    <md-toolbar>
+      <div class="md-toolbar-tools">
+        <h2>Edit Publication</h2>
+        <span flex></span>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div class="md-dialog-content">
+        <div ng-repeat="key in ['title', 'year', 'authors', 'journal']">
+          <md-input-container class="md-block">
+            <label>{{key | uppercase}}</label>
+            <input ng-model="ctrl.publications[0][key]">
+          </md-input-container>
+        </div>
+      </div>
+    </md-dialog-content>
+    <md-dialog-actions layout="row">
+      <span flex></span>
+      <md-button ng-click="ctrl.saveEdit()">
+        Cancel
+      </md-button>
+      <md-button ng-click="ctrl.saveEdit()" style="margin-right:20px;">
+        Save
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

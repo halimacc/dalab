@@ -1,0 +1,9 @@
+<div ng-controller="PublicationController as ctrl">
+  <md-list>
+    <md-list-item ng-repeat="pub in ctrl.publications">
+      <p>{{ pub.title }} - {{pub.year}}</p>
+      <md-icon class="material-icons da-icon-button md-primary" aria-label="Edit Publication" ng-click="ctrl.edit(pub)">mode_edit</md-icon>
+      <md-icon class="material-icons da-icon-button md-warn" aria-label="Delete Publication" ng-click="ctrl.remove(pub)">delete</md-icon>
+    </md-list-item>
+  </md-list>
+</div>
